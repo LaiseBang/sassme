@@ -1,0 +1,63 @@
+$primarycolor: #797979;
+$secondarycolor: #e3be42;
+$textcolor: #000000;
+$space: 20px;
+
+// struktur
+nav {
+  ul {
+    list-style: none;
+
+    li {
+      margin: 0;
+      display: inline;
+
+      a {
+        text-decoration: none;
+        color: $secondarycolor;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+html,
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: $secondarycolor;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  background: $secondarycolor;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: $space/2;
+  padding: $space/2;
+}
+
+div {
+  background: $primarycolor;
+  padding: $space/4;
+}
+
+.myContainers {
+  @extend div;
+  color: $textcolor;
+}
+
+footer {
+  @extend div;
+  padding: $space;
+  margin-top: $space;
+}
